@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace HttpGetBinary.Server
 {
@@ -6,7 +7,12 @@ namespace HttpGetBinary.Server
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var httpServer = new HttpServer();
+            CancellationTokenSource cts = new CancellationTokenSource();
+
+            httpServer.StartHttpService(cts,50888);
+            Console.ReadLine();
+
         }
     }
 }

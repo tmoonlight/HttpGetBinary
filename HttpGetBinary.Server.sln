@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpGetBinary.Server", "HttpGetBinary.Server\HttpGetBinary.Server.csproj", "{F4DCC7CF-A7C1-4B71-BE33-8BDEA788830B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpGetBinary.Server", "HttpGetBinary.Server\HttpGetBinary.Server.csproj", "{F4DCC7CF-A7C1-4B71-BE33-8BDEA788830B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpGetBinary.Client", "HttpGetBinary.Client\HttpGetBinary.Client.csproj", "{73451C22-7DF9-4596-8533-8286B7ADC113}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HttpGetBinary.Client", "HttpGetBinary.Client\HttpGetBinary.Client.csproj", "{73451C22-7DF9-4596-8533-8286B7ADC113}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpGetBinary.Client.Winform", "HttpGetBinary.Client.Winform\HttpGetBinary.Client.Winform.csproj", "{72BAE6C8-C2F9-47D9-BC19-8D905B86F26F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{73451C22-7DF9-4596-8533-8286B7ADC113}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73451C22-7DF9-4596-8533-8286B7ADC113}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73451C22-7DF9-4596-8533-8286B7ADC113}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72BAE6C8-C2F9-47D9-BC19-8D905B86F26F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72BAE6C8-C2F9-47D9-BC19-8D905B86F26F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72BAE6C8-C2F9-47D9-BC19-8D905B86F26F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72BAE6C8-C2F9-47D9-BC19-8D905B86F26F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
