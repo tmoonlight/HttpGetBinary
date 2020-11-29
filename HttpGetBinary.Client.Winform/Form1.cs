@@ -43,12 +43,12 @@ namespace HttpGetBinary.Client.Winform
                 while ((readCount = fileStream.Read(bytes, 0, maxLength)) > 0)
                 {
                     Console.WriteLine("发送" + readCount);
-                    string str = Convert.ToBase64String(bytes, 0, readCount);
-                    str = HttpUtility.UrlEncode(str);
+                    //string str = Convert.ToBase64String(bytes, 0, readCount);
+                    string str = Base64Url.Encode(bytes,0,readCount); //HttpUtility.UrlEncode(bytes);
 
                     Get(url + "?t=" + str + "&q=" + q);
-                    var testbt = HttpUtility.UrlDecodeToBytes(str);
-                    Console.WriteLine(testbt.Length);
+                    //var testbt = HttpUtility.UrlDecodeToBytes(str);
+                   // Console.WriteLine(testbt.Length);
                     q++;
                 }
             }

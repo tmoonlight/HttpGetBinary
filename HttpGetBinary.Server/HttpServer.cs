@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Buffers.Text;
 using System.Collections.Generic;
 //using System.ComponentModel.DataAnnotations;
 using System.IO;
@@ -170,9 +171,10 @@ namespace HttpGetBinary.Server
                     }
 
                     string basesource = parameters[0].ToString();
-                    string srcString = HttpUtility.UrlDecode(basesource);
-                    var srcBytes = Convert.FromBase64String(srcString);
-                    LoggerDebug("接收到字符长度：" + srcBytes.Length);
+                    //string srcString = HttpUtility.UrlDecode(basesource);
+                   
+
+                    
                     //需要考虑接收顺序
 
                     if (basesource == "S")//开始写文件
@@ -188,6 +190,8 @@ namespace HttpGetBinary.Server
                     }
                     else
                     {
+                        var srcBytes = Base64Url.Decode(basesource);
+                        LoggerDebug("接收到字符长度：" + srcBytes.Length);
                         fs.Write(srcBytes);
                         LoggerDebug("序列" + request.QueryString["q"].ToString());
                     }
